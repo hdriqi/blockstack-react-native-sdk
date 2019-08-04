@@ -84,6 +84,15 @@ Once this is set up, move on to the next section to integrate the Blockstack SDK
   - Add `using Blockstack.Sdk.RNBlockstackSdk;` to the usings at the top of the file
   - Add `new RNBlockstackSdkPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
+### Add Deep Linking for Android
+```
+<intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="yourappname" />
+</intent-filter>
+```
 
 ## Usage
 ```javascript
